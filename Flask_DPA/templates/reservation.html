@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Reserve Today</legend>
+                <div class="form-group">
+                    {{ form.license_plate.label(class="form-control-label") }}
+                    {% if form.license_plateerrors %}
+                        {{ form.license_plate(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.license_plate.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.license_plate(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+                <div class="page-header">
+                	{{ form.reservation_date.label(class="form-control-label") }}
+                	{{form.reservation_date (class= "datepicker")}}
+				</div>
+
+                <div class="form-group">
+				            {{form.reservation_start_time.label(class="form-control-label")}}
+				            {% if form.reservation_start_time.errors %}
+				              {{ form.reservation_start_time(class="form-control form-control-lg is-invalid")}}
+				              <div class="invalid-feedback">
+				                {% for error in form.reservation_start_time.errors %}
+				                    <span>{{error}}</span>
+				                {% endfor %}
+				              </div>
+				            {% else %}
+				              {{form.reservation_start_time(class="form-control form-control-lg")}}
+				            {% endif %}
+				</div>
+                <div class="form-group">
+				            {{form.reservation_end_time.label(class="form-control-label")}}
+				            {% if form.reservation_end_time.errors %}
+				              {{ form.reservation_end_time(class="form-control form-control-lg is-invalid")}}
+				              <div class="invalid-feedback">
+				                {% for error in form.reservation_end_time.errors %}
+				                    <span>{{error}}</span>
+				                {% endfor %}
+				              </div>
+				            {% else %}
+				              {{form.reservation_end_time(class="form-control form-control-lg")}}
+				            {% endif %}
+				</div>
+
+                <div class="form-group">
+                	{{ form.handicap_parking.label(class="form-control-label") }}
+                	{% for subfield in form.handicap_parking %}
+					    <tr>
+					        <td>{{ subfield }}</td>
+					        <td>{{ subfield.label }}</td>
+					    </tr>
+					{% endfor %}
+                </div>
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+    <div class="border-top pt-3">
+        <small class="text-muted">
+            Already Have An Account? <a class="ml-2" href="{{ url_for('login') }}">Sign In</a>
+        </small>
+    </div>
+    <div>
+        <small class="text-muted">
+            Need An Account? <a class="ml-2" href="{{ url_for('register') }}">Sign Up Now</a>
+        </small>
+    </div>
+{% endblock content %}
