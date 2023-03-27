@@ -6,16 +6,10 @@ app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
 
 posts = [
     {
-        'author': 'Daniel Pay',
-        'title': 'Blog Post 1',
-        'content': 'First post content',
-        'date_posted': 'April 20, 2018'
-    },
-    {
-        'author': 'Jane Doe',
-        'title': 'Blog Post 2',
-        'content': 'Second post content',
-        'date_posted': 'April 21, 2018'
+        'author': 'Keanu Reeves Fan Club',
+        'title': 'Dynamic Parking App',
+        'content': 'Hello and Welcome to the Dynamic Parking App (DPA) Homepage! ',
+        'date_posted': 'September 2, 1964'
     }
 ]
 
