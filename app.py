@@ -53,16 +53,16 @@ print ("connected to database")
 """
 posts = [
     {
-        'author': 'Daniel Pay',
-        'title': 'Blog Post 1',
-        'content': 'First post content',
-        'date_posted': 'April 20, 2018'
+        'author': 'Keanu Reeves',
+        'title': 'Welcome to the Dynamic Parking App!',
+        'content': 'The dynamic parking app is now here to help easy the pain of finding a parking space.',
+        'date_posted': 'September 2, 1964'
     },
     {
-        'author': 'Jane Doe',
-        'title': 'Blog Post 2',
-        'content': 'Second post content',
-        'date_posted': 'April 21, 2018'
+        'author': 'DPA Admin',
+        'title': 'Updates',
+        'content': 'Passwords are now encrypted for your safety',
+        'date_posted': 'April 4, 2023'
     }
 ]
 
