@@ -213,7 +213,7 @@ def register():
             #db_password2 = sha256_crypt.encrypt(password)
 
             print(db_password)
-            print(db_password2)
+            #print(db_password2)
             print(sha256_crypt.verify("P@ssw0rd", db_password))
 
             #hpass =hashlib.md5(user_password.encode())
